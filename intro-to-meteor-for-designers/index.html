@@ -289,6 +289,44 @@ class: center, middle, inverse
 ---
 
 .left-column[
+  ## Storing and Retrieving Data
+]
+.right-column[
+### Minimongo (JSON + MongoDB)
+
+```json
+{
+  id: 12345,
+  name: 'Cincinnati',
+  events: [
+    {
+      name: 'User Enjoyment (UX) Meetup',
+      awesomeness: 10
+    },
+    {
+      name: 'Meteor Cincinnati',
+      awesomeness: 10
+    }
+  ]
+}
+```
+
+- Meteor provides easy access to find, insert, update documents in a collection
+
+
+```javascript
+Events.find(12345)
+Events.insert({ name: 'Indianapolis' })
+Events.update(
+  { id: 12345 },
+  { $set: { name: 'Queen City' } }
+)
+```
+]
+
+---
+
+.left-column[
   ## Packages
 ]
 .right-column[
